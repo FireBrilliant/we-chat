@@ -1,5 +1,24 @@
 {
-  "pages": ["pages/me/main"],
+  "pages": ["pages/me/main","pages/books/main","pages/comments/main"],
+  "tabBar": {
+    "selectedColor":"#EA5149",
+    "list": [{
+      "pagePath": "pages/me/main",
+      "selectedIconPath":"static/img/me-active.png",
+      "iconPath":"static/img/me.png",
+      "text": "我"
+    }, {
+      "pagePath": "pages/books/main",
+      "selectedIconPath":"static/img/book-active.png",
+      "iconPath":"static/img/book.png",
+      "text": "图书"
+    }, {
+      "pagePath": "pages/comments/main",
+      "selectedIconPath":"static/img/todo-active.png",
+      "iconPath":"static/img/todo.png",
+      "text": "评论"
+    }]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EA5149",
