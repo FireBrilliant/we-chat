@@ -8,7 +8,7 @@
   export default {
     name: 'Book',
     created () {
-      console.log('jkk')
+      console.log('book')
     }
   }
 </script>

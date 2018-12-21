@@ -1,5 +1,5 @@
 <script>
-  import config from "./config"
+  import config from './config'
   export default {
     created () {
       // 调用API从本地缓存中获取数据
@@ -7,9 +7,9 @@
       // logs.unshift(Date.now())
       // wx.setStorageSync('logs', logs)
       wx.request({
-        url: config.host + "/weapp/demo",
+        url: config.host + '/weapp/demo',
         success (res) {
-          console.log(res)
+          console.log(res, 'app.vue')
         }
       })
     }
