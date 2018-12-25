@@ -1,7 +1,7 @@
 // 测试demo文件
 
-module.exports = async (ctx)=>{
+module.exports = ctx => {
   ctx.state.data = {
-    msg:'hello 小程序后台123'
+    msg: 'Hello World'
   }
 }

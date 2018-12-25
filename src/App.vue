@@ -1,17 +1,15 @@
 <script>
+  import { get } from './util'
+  import qcloud from 'wafer2-client-sdk'
   import config from './config'
   export default {
-    created () {
+    async created () {
       // 调用API从本地缓存中获取数据
       // const logs = wx.getStorageSync('logs') || []
       // logs.unshift(Date.now())
       // wx.setStorageSync('logs', logs)
-      wx.request({
-        url: config.host + '/weapp/demo',
-        success (res) {
-          console.log(res, 'app.vue')
-        }
-      })
+      const res = await get('/weapp/demo')
+      console.log(123, res)
     }
   }
 </script>
