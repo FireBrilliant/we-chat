@@ -28,7 +28,7 @@
                 } else {
                   // 没有授权需要弹框
                   that.setData({ showModel: false });
-                  wx.showLoading({ title: "加载中..." }
+                  wx.showLoading({ title: "加载中..." })
                   that.getOP(app.globalData.userInfo)
                 }
               },
@@ -74,7 +74,7 @@
               if (that.data.cid) {
                 wx.navigateTo({ url: "/pages/course/course?cid=" + that.data.cid });
               }
-            } else if (res.data.respcode == "15") {
+            } else if (res.data.respcode === "15") {
               wx.hideLoading();
               wx.showToast({ title: "没有授权，不能进入小程序", icon: "none", duration: 2000 });
             }

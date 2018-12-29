@@ -1,5 +1,22 @@
 // 工具函数库
 import config from './config'
+
+// 获取登录验证信息
+export function getSessionKey (code){
+  let url = `https://api.weixin.qq.com/sns/jscode2session?appid=wxbd613e1776bdb186&secret=40889ba66d272fc94936eedd10fd2e60&js_code=${code}&grant_type=authorization_code`;
+  return new Promise((resolve, reject)=>{
+    wx.request({
+      url:url,
+      success: function(res){
+        if(res.data){
+          resolve(res.data);
+        }else{
+          reject(res.data);
+        }
+      }
+    })
+  })
+}
 // get请求
 export function get (url, data) {
   return new Promise((resolve, reject) => {
